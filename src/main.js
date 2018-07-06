@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import App from './App'
 import router from './router'
 import MintUI from 'mint-ui'
@@ -12,6 +13,7 @@ import VueTouch from 'vue-touch'
 import _glob from './components/methodCommon.vue'
 Vue.config.productionTip = false
 Vue.use(VueResource)
+Vue.use(Vuex)
 Vue.use(MintUI)
 Vue.use(ElementUI)
 Vue.use(VueTouch, {name: 'v-touch'})
@@ -39,8 +41,23 @@ createMap().then(function () {
   console.log('发生错误！', error)
 })
 
+// vueX仓库
+const store = new Vuex.Store({
+  state: {
+    count: 1,
+    name: '我从根组件注入而来'
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   router,
+  // 把 store 对象提供给 “store” 选项，这可以把 store 的实例注入所有的子组件
+  store,
   render: h => h(App)
 }).$mount('#app')

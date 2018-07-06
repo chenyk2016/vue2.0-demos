@@ -2,7 +2,7 @@
 
   <div class='filter_date'>
     <div class='title'>
-      <span class='title_name'>自动选择日期：</span><span class='title_date selectedDate' >{{ date }}</span>
+      <span class='title_name'>自动选择日期：</span><span class='title_date selectedDate inlineModel' >{{ date }}</span>
     </div>
     <lcalendar-auto 
       @onSelChange='selChange' 

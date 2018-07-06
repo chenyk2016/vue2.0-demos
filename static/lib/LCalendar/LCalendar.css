@@ -4,6 +4,11 @@
     background-color: #fff;
     display: block;
     position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: auto;
     z-index: 9;
@@ -13,6 +18,7 @@
 .gearDate.autoModel{
     position: relative; 
     z-index: 1;
+    height: auto;
 }
 .gearDate.autoModel .date_ctrl{
     position: relative;
@@ -23,10 +29,10 @@
     color: #000;
     margin: 0;
     height: auto;
-    width:100%;
+    width: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     z-index: 9;
     overflow: hidden;
     transform: translate3d(0, 0, 0)
@@ -180,8 +186,11 @@
     transform: scaleY(0.33)
 }
 
-.date_btn_box {
+.autoModel .date_btn_box{
     display: none;
+}
+.date_btn_box {
+    display: flex;
     justify-content: space-between;
     align-items: stretch;
     background-color: #f1f2f4;

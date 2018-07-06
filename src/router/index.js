@@ -96,6 +96,11 @@ export default new VueRouter({
           title: '时间选择器'
         }
       }
+    }, {
+      path: '/vueX',
+      component: function (resolve) {
+        require(['../views/vueX/vueXDemo.vue'], resolve)
+      }
     }
   ]
 })

@@ -91,6 +91,10 @@
     {
       url: '#/lcalendar',
       text: '7、时间选择器'
+    },
+    {
+      url: '#/vueX',
+      text: '8、vueX Demo'
     }
   ]
   const course = [
